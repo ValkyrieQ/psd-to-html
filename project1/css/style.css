@@ -67,6 +67,7 @@ header {
       header nav ul.menu li {
         padding: 1rem; }
         header nav ul.menu li a {
+          font-size: 1.3rem;
           text-decoration: none;
           color: #010101;
           font-weight: bold; }
@@ -79,9 +80,9 @@ header {
       header .banner .banner-text h1 {
         font-size: 2rem;
         font-weight: bold; }
-      header .banner .banner-text p.big {
-        font-size: 1.2rem;
+      header .banner .banner-text p.normal {
         margin: 1rem 0;
+        font-size: 1.2rem;
         color: #555;
         line-height: 1.2; }
       header .banner .banner-text p.small {
@@ -98,6 +99,97 @@ header {
       width: 50%;
       text-align: center; }
       header .banner .banner-img img {
-        width: 90%; }
+        width: 75%; }
+
+.features {
+  padding-top: 1rem;
+  padding-bottom: 4rem; }
+  .features .features-header {
+    text-align: center;
+    margin: 4rem 0; }
+    .features .features-header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1rem 0; }
+    .features .features-header p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.2; }
+  .features .features-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .features .features-items .features-item {
+      display: flex;
+      margin-bottom: 3rem; }
+      .features .features-items .features-item .features-item-img {
+        padding: 0 2rem;
+        font-size: 2.5rem; }
+      .features .features-items .features-item .features-item-text h2 {
+        font-size: 1.3rem;
+        color: #444; }
+      .features .features-items .features-item .features-item-text p {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.2;
+        margin: 1rem 0; }
+
+footer {
+  background-color: #010101;
+  padding: 5rem 0; }
+  footer .footer-top {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    footer .footer-top h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fcdb00;
+      padding: 1rem 0; }
+    footer .footer-top p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.2;
+      margin-bottom: 2.5rem; }
+    footer .footer-top input {
+      width: 75%;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.2;
+      border-radius: 5px;
+      border: none; }
+    footer .footer-top button {
+      padding: 0.8rem 1.7rem;
+      border: none;
+      border-radius: 5px;
+      margin-left: 1rem;
+      background-color: #fcdb00;
+      font-weight: bold; }
+    footer .footer-top ul.social {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin: 3rem 0; }
+      footer .footer-top ul.social li {
+        font-size: 2.5rem;
+        padding: 1rem; }
+        footer .footer-top ul.social li a {
+          text-decoration: none;
+          color: #fcdb00; }
+  footer .footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    color: #fff;
+    padding: 3rem 0; }
+    footer .footer-bottom .footer-company {
+      margin-right: 7rem; }
+      footer .footer-bottom .footer-company p {
+        line-height: 1.2; }
+    footer .footer-bottom .footer-info ul li {
+      padding-bottom: 0.3rem; }
+      footer .footer-bottom .footer-info ul li a {
+        text-decoration: none;
+        color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
