@@ -122,13 +122,15 @@ header {
 
   .features-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     .features-item {
       display: flex;
       margin-bottom: 3rem;
 
       .features-item-img {
-        padding: 0 2rem;
+        width: 200px;
+        text-align: center;
         font-size: 2.5rem;
       }
 
@@ -219,6 +221,93 @@ footer {
           text-decoration: none;
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      flex-direction: column;
+    }
+    .banner {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      .banner-text {
+        padding: 0;
+      }
+    }
+  }
+
+  .features {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer {
+    .footer-bottom {
+      padding: 0 2rem;
+      .footer-company {
+        margin-right: 5rem;
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    nav {
+      flex-direction: column;
+    }
+
+    .banner {
+      padding: 3rem 2rem 2rem;
+      flex-direction: column;
+      .banner-text {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+
+        ul.os {
+          justify-content: center;
+          li {
+            margin: 2rem;
+          }
+        }
+      }
+
+      .banner-img {
+        width: 100%;
+      }
+    }
+  }
+
+  .features {
+    padding: 1rem 2rem 4rem;
+  }
+
+  footer {
+    padding: 5rem 0 3rem;
+    .footer-top {
+      button {
+        margin-top: 1rem;
+      }
+    }
+    .footer-bottom {
+      grid-template-columns: 1fr;
+      padding: 0;
+      text-align: center;
+
+      .footer-company {
+        margin: 1rem 0;
+      }
+
+      .footer-info {
+        margin-bottom: 1rem;
       }
     }
   }
