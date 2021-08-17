@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -125,5 +126,201 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  width: 98%; }
+
+header nav {
+  background-color: #262626;
+  height: 6rem; }
+  header nav .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem; }
+    header nav .nav-flex ul {
+      display: flex; }
+      header nav .nav-flex ul li {
+        margin-right: 2rem; }
+        header nav .nav-flex ul li a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          transition: 0.3s; }
+          header nav .nav-flex ul li a:hover {
+            color: #ff6760; }
+header .header-webpaint {
+  padding: 3.5rem 0;
+  height: 24.5rem;
+  background-color: #2a2a2a;
+  color: #d9d9d9;
+  text-align: center; }
+  header .header-webpaint h1 {
+    font-size: 3.5rem; }
+    header .header-webpaint h1 .big {
+      font-weight: bold; }
+  header .header-webpaint p {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem; }
+  header .header-webpaint a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #ff6760;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px; }
+
+.services {
+  background-color: #f8f8f8;
+  padding: 5.5rem; }
+  .services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .services .services-grid .services-item {
+      text-align: center;
+      color: #616161; }
+      .services .services-grid .services-item i {
+        font-size: 3.5rem;
+        margin-bottom: 2rem; }
+      .services .services-grid .services-item h3 {
+        font-size: 1rem;
+        font-weight: bold; }
+      .services .services-grid .services-item p {
+        font-size: 0.9rem;
+        padding: 1rem;
+        line-height: 1.5; }
+
+.ourfeatured {
+  padding: 4rem 0; }
+  .ourfeatured .ourfeatured-title {
+    text-align: center;
+    color: #616161; }
+    .ourfeatured .ourfeatured-title h1 {
+      font-size: 1.8rem;
+      font-weight: bold; }
+    .ourfeatured .ourfeatured-title p {
+      padding: 1.5rem 0;
+      color: #888; }
+  .ourfeatured .ourfeatured-content ul.ourportfolio {
+    display: flex;
+    justify-content: center; }
+    .ourfeatured .ourfeatured-content ul.ourportfolio li {
+      padding: 1rem 0.3rem; }
+      .ourfeatured .ourfeatured-content ul.ourportfolio li a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #ff6760;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        transition: 0.3s; }
+        .ourfeatured .ourfeatured-content ul.ourportfolio li a:hover {
+          background-color: #616161; }
+  .ourfeatured .ourfeatured-grid {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 0.5rem; }
+
+footer {
+  text-align: center; }
+  footer .footer-top {
+    background-color: #313131;
+    padding: 3.8rem; }
+    footer .footer-top h1 {
+      color: #d9d9d9;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem; }
+    footer .footer-top p {
+      color: #999; }
+    footer .footer-top ul.footer-top-address {
+      font-size: 0.8rem;
+      color: #999;
+      display: flex;
+      justify-content: center; }
+      footer .footer-top ul.footer-top-address li {
+        padding: 1.5rem; }
+        footer .footer-top ul.footer-top-address li i {
+          color: #ff6760; }
+    footer .footer-top ul.footer-top-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem; }
+      footer .footer-top ul.footer-top-social li {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; }
+        footer .footer-top ul.footer-top-social li a {
+          display: inline-block;
+          text-decoration: none;
+          color: #fff; }
+        footer .footer-top ul.footer-top-social li:nth-child(1) {
+          background-color: sandybrown; }
+        footer .footer-top ul.footer-top-social li:nth-child(2) {
+          background-color: #006eff; }
+        footer .footer-top ul.footer-top-social li:nth-child(3) {
+          background-color: #2eb3ff; }
+        footer .footer-top ul.footer-top-social li:nth-child(4) {
+          background-color: #ff88e5; }
+        footer .footer-top ul.footer-top-social li:nth-child(5) {
+          background-color: #fd4b4b; }
+  footer .footer-bottom {
+    background-color: #2c2c2c;
+    color: #999;
+    font-size: 0.9rem;
+    padding: 2rem 0; }
+
+@media screen and (max-width: 768px) {
+  .services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+  .ourfeatured .ourfeatured-grid .ourfeatured-item img {
+    width: 100%; } }
+@media screen and (max-width: 480px) {
+  header nav {
+    padding: 2rem 0;
+    height: auto; }
+    header nav .nav-flex {
+      flex-direction: column; }
+      header nav .nav-flex ul li {
+        margin: 0;
+        padding: 0 0.7rem; }
+  header .header-webpaint {
+    height: auto; }
+
+  .ourfeatured .ourfeatured-grid .ourfeatured-item img {
+    width: 100%; }
+
+  footer .footer-top {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+    footer .footer-top ul.footer-top-address {
+      flex-direction: column;
+      margin: 1.5rem 0; }
+      footer .footer-top ul.footer-top-address li {
+        padding: 0.5rem 0; } }
 
 /*# sourceMappingURL=style.css.map */
