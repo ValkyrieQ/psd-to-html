@@ -67,11 +67,12 @@ header {
 .our-story {
   height: 640px;
   background-color: #962323;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   .our-story-container {
+    height: 640px;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -90,6 +91,18 @@ header {
           width: 20%;
           margin: 0 auto;
         }
+
+        // position: relative;
+
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   left: 50%;
+        //   border-bottom: 2px solid #fff;
+        //   transform: translateX(-50%);
+        //   width: 100px;
+        //   bottom: -20px;
+        // }
       }
 
       p {
@@ -125,7 +138,7 @@ header {
           content: "";
           display: block;
           padding-top: 1.5rem;
-          border-bottom: 2px solid #962323;
+          border-bottom: 2px solid #c8235d;
           width: 20%;
           margin: 0 auto;
         }
@@ -154,7 +167,7 @@ header {
       &::after {
         content: "";
         padding-top: 1.5rem;
-        border-bottom: 2px solid #962323;
+        border-bottom: 2px solid #c8235d;
         display: block;
         width: 15%;
         margin: 0 auto;
@@ -168,7 +181,7 @@ header {
 
     .our-menu-left-item,
     .our-menu-right-item {
-      margin: 0rem 7rem;
+      margin: 0rem 6rem;
       padding: 1rem;
       border-radius: 10px;
       transition: 0.3s;
@@ -180,7 +193,7 @@ header {
           font-weight: bold;
         }
         p {
-          color: palevioletred;
+          color: #c8235d;
         }
       }
 
@@ -200,10 +213,17 @@ header {
 }
 
 .portfolio {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   .portfolio-item {
     img {
       width: 100%;
+      transition: 0.4s;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -215,9 +235,10 @@ footer {
 
     .footer-top-container {
       display: grid;
-      grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr 0.7fr;
+      // grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr 0.7fr;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       .footer-top-item {
-        margin: 4rem 3rem 4rem 0;
+        margin: 4rem 2rem 4rem 0;
 
         h3 {
           font-size: 1.4rem;
@@ -245,7 +266,7 @@ footer {
 
             i {
               margin-right: 0.8rem;
-              color: #962323;
+              color: #c8235d;
             }
           }
         }
@@ -270,8 +291,106 @@ footer {
           margin: 1rem 0;
           a {
             text-decoration: none;
-            color: #ccc;
+            color: #aaa;
+
+            &:hover {
+              color: #fff;
+            }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    padding-top: 3rem;
+    height: 120px;
+  }
+
+  .our-story {
+    padding: 3rem 0;
+    height: auto;
+    .our-story-container {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  .our-menu .our-menu-container {
+    flex-direction: column;
+
+    .our-menu-left-item,
+    .our-menu-right-item {
+      margin: 0rem 3rem;
+    }
+  }
+
+  footer {
+    .footer-top .footer-top-container .footer-top-item {
+      margin: 2rem 2rem 1rem 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    nav {
+      height: auto;
+      ul.menu {
+        flex-direction: column;
+        margin-top: 1rem;
+
+        li {
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+
+    .header-title {
+      align-items: stretch;
+      margin-top: 9rem;
+      .header-text p {
+        padding: 2rem;
+      }
+    }
+  }
+
+  .singatures {
+    .singatures-container {
+      .singatures-text {
+        p {
+          line-height: 2;
+          width: 75%;
+          // margin: 0 auto;
+          padding-top: 3rem;
+        }
+      }
+    }
+  }
+
+  .our-menu {
+    .our-menu-title h3 {
+      margin-bottom: 3rem;
+    }
+
+    .our-menu-left .our-menu-left-item,
+    .our-menu-right .our-menu-right-item {
+      margin: 0;
+    }
+  }
+
+  footer {
+    .footer-bottom {
+      padding: 1rem 0;
+      .footer-bottom-container {
+        flex-direction: column;
+
+        ul li {
+          padding: 0;
+          margin: 1rem 1rem 0;
         }
       }
     }
