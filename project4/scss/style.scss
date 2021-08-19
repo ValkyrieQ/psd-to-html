@@ -1,0 +1,361 @@
+@import "reset";
+@import "base";
+
+$colorButton: #fd4f32;
+$heightHeader: 600px;
+$heightNav: 80px;
+
+.container {
+  max-width: 1000px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+header {
+  height: $heightHeader;
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $heightNav;
+    // .logo {
+    //   padding: 1.5rem 0;
+    // }
+
+    .menu_toggle {
+      width: 90px;
+      height: 70px;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      right: 10%;
+
+      cursor: pointer;
+      transition: 0.6s;
+      div {
+        width: 33px;
+        height: 4px;
+        margin: 5px 28px;
+        background-color: #fff;
+
+        &:nth-child(1) {
+          margin-top: 20px;
+        }
+      }
+
+      &.active {
+        right: 345px;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    ul.menu_list {
+      width: 345px;
+      height: 100vh;
+
+      position: fixed;
+      top: 0;
+      right: -345px;
+      z-index: 1;
+      transition: 0.6s;
+
+      li {
+        text-align: center;
+        line-height: 70px;
+        transition: 0.4s;
+
+        a {
+          text-decoration: none;
+          color: #f1f1f1;
+        }
+
+        &:hover {
+          background-color: $colorButton;
+        }
+      }
+
+      &.active {
+        right: 0px;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    // .menu_toggle {
+    //   position: absolute;
+    //   right: 10%;
+    //   padding: 1.5rem;
+    //   transition: 0.6s;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   cursor: pointer;
+
+    //   div {
+    //     width: 24px;
+    //     height: 3px;
+    //     background-color: #fff;
+    //     margin-bottom: 3px;
+    //   }
+
+    //   &.active {
+    //     right: 345px;
+    //     // transition: 0.6s;
+    //     background-color: rgba(255, 255, 255, 0.2);
+    //   }
+    // }
+
+    // ul.menu {
+    //   position: fixed;
+    //   top: 0;
+    //   right: -345px;
+    //   width: 345px;
+    //   height: 100vh;
+    //   transition: 0.6s;
+
+    //   li {
+    //     height: 70px;
+    //     text-align: center;
+    //     line-height: 70px;
+
+    //     a {
+    //       text-decoration: none;
+    //       color: #f1f1f1;
+    //     }
+
+    //     &:hover {
+    //       background-color: $colorButton;
+    //     }
+    //   }
+
+    //   &.show {
+    //     right: 0px;
+    //     background-color: rgba(255, 255, 255, 0.2);
+    //   }
+    // }
+  }
+  .header_search {
+    height: ($heightHeader - $heightNav);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 200;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .search_box {
+      display: flex;
+      justify-content: center;
+
+      input {
+        border: none;
+        outline: none;
+        padding: 1rem 5rem 1rem 1rem;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 1rem 3rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: #fd4f32;
+        transition: 0.4s;
+
+        &:hover {
+          background-color: #da452c;
+        }
+      }
+    }
+  }
+}
+// End Header Styling
+
+.destinations {
+  padding: 3.5rem;
+  background-color: #eeeeee;
+
+  .destinations_title {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    p {
+      padding: 1rem 0;
+      color: #8b8b8b;
+    }
+  }
+
+  .destinations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem 0;
+
+    figure {
+      transition: 0.3s;
+      .image {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        span.price {
+          position: absolute;
+          bottom: 10%;
+          right: 10%;
+          color: #fff;
+        }
+      }
+
+      figcaption {
+        background-color: #fff;
+        padding: 1rem;
+        h3 {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 0.8rem;
+          color: #696969;
+          padding-top: 1rem;
+        }
+      }
+
+      &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+// End Destinations styling
+
+.subscribe {
+  padding: 4rem;
+
+  .subscribe_title {
+    h1 {
+      font-weight: 300;
+      font-size: 3.5rem;
+    }
+  }
+
+  .subscribe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 3rem 0.5rem;
+    grid-gap: 2rem;
+    justify-content: center;
+
+    .subscribe-item {
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      p {
+        font-size: 0.8rem;
+        color: #696969;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  .subscribe_box-container {
+    text-align: center;
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .subscribe_box {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+      input {
+        border: none;
+        outline: none;
+        padding: 1rem 5rem 1rem 1rem;
+        background-color: #eee;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 1rem 3rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: #fd4f32;
+        transition: 0.4s;
+
+        &:hover {
+          background-color: #da452c;
+        }
+      }
+    }
+  }
+}
+
+// End subscribe section
+
+footer {
+  background-color: #eeeeee;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      li {
+        padding: 2rem 0rem 2rem 1rem;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #000;
+          &:hover {
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    justify-content: center;
+  }
+
+  // another technique for align element to center
+  //   header nav .logo {
+  //     position: relative;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //   }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .footer_company {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .header_search h1 {
+    font-size: 2.5rem;
+  }
+}
