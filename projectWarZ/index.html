@@ -8,17 +8,102 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <ul class="menu">
-          <li><a href="#">หน้าแรก</a></li>
-          <li><a href="#">สมัครสมาชิก</a></li>
-          <li><a href="#">แนะนำการเล่น</a></li>
-          <li><a href="#">ดาวน์โหลด</a></li>
-          <li><a href="#">จัดอันดับ</a></li>
-          <li><a href="#">เว็บบอร์ด</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v11.0"
+      nonce="Kl6zb2N8"
+    ></script>
+    <main>
+      <div class="container">
+        <nav>
+          <ul class="menu">
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">สมัครสมาชิก</a></li>
+            <li><a href="#">แนะนำการเล่น</a></li>
+            <li><a href="#">ดาวน์โหลด</a></li>
+            <li><a href="#">จัดอันดับ</a></li>
+            <li><a href="#">เว็บบอร์ด</a></li>
+          </ul>
+        </nav>
+
+        <section class="left-panel">
+          <div class="login">
+            <form>
+              <input type="text" name="username" id="username" />
+              <input type="password" name="password" id="password" /><br />
+              <input type="submit" value="" />
+              <a href="#" id="register"></a>
+            </form>
+          </div>
+          <div class="refill">
+            <a href="#"></a>
+          </div>
+          <div class="download">
+            <a href="#"></a>
+          </div>
+          <div class="guide">
+            <a href="#"></a>
+          </div>
+          <div class="contact">
+            <a href="#"></a>
+          </div>
+        </section>
+
+        <section class="main">
+          <div class="video">
+            <div class="label"></div>
+            <iframe
+              width="440"
+              height="260"
+              src="https://www.youtube.com/embed/1GRUgfRRvwM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="news">
+            <div class="label"></div>
+            <iframe width="440" height="260" src="news.html"></iframe>
+          </div>
+        </section>
+
+        <section class="right-panel">
+          <div class="server">
+            <p>Status: <span>Online</span></p>
+          </div>
+          <div class="activity">
+            <a href="#"></a>
+          </div>
+          <div class="fb"></div>
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/facebook"
+            data-tabs="timeline"
+            data-width="190"
+            data-height="350"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/facebook"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/facebook">Facebook</a>
+            </blockquote>
+          </div>
+        </section>
+
+        <footer class="clearfix">
+          <p>Copyright &copy; 2021 WarZ Fanpage.</p>
+          <p>All Rights Reserved. Design by Hikaru</p>
+        </footer>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,34 +1,199 @@
-@import "reset";
+// @import "reset";
 @import "base";
 
 .container {
-  // max-width: 1000px;
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
-  overflow: auto;
 }
 
-body {
-  background: url("../img/bg.jpg") no-repeat;
-  background-position: center;
+main {
   width: 100%;
   height: 1600px;
+  background: url("../img/bg.jpg") no-repeat;
+  background-position: center;
+  overflow: auto;
 
   nav {
-    background: url("../img/menu.png") no-repeat;
+    width: 1000px;
     height: 45px;
+    background: url("../img/menu.png") no-repeat;
     margin-top: 510px;
+    margin-bottom: 20px;
+
     ul.menu {
       text-align: center;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
+      margin-right: 50px;
       li {
+        display: inline-block;
         margin-top: 15px;
         margin-left: 50px;
-        display: inline-block;
-        // padding: 1.5rem 2rem;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
       }
     }
   }
+
+  .left-panel {
+    float: left;
+    .login {
+      width: 266px;
+      height: 200px;
+      background: url("../img/button1.png") no-repeat;
+      text-align: center;
+
+      input[type="text"] {
+        margin-top: 50px;
+      }
+
+      input[type="password"] {
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        padding: 3px;
+      }
+
+      input[type="submit"] {
+        width: 65px;
+        height: 30px;
+        background: url("../img/login.png") no-repeat;
+        border: none;
+        outline: none;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+
+      a#register {
+        width: 33px;
+        height: 29px;
+        background: url("../img/register.png") no-repeat;
+        display: inline-block;
+        position: relative;
+        top: 8.5px;
+      }
+    }
+    // End login styling
+
+    .refill {
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 195px;
+        height: 123px;
+        background: url("../img/button2.png") no-repeat;
+      }
+    }
+
+    .download {
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 170px;
+        height: 145px;
+        background: url("../img/button3.png") no-repeat;
+      }
+    }
+
+    .guide {
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 195px;
+        height: 118px;
+        background: url("../img/button4.png") no-repeat;
+      }
+    }
+
+    .contact {
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 170px;
+        height: 140px;
+        background: url("../img/button5.png") no-repeat;
+      }
+    }
+  }
+  //   End left panel styling
+  .main {
+    float: left;
+    text-align: center;
+    .video {
+      .label {
+        width: 483px;
+        height: 114px;
+        background: url("../img/label1.png") no-repeat;
+        background-position: center;
+      }
+      iframe {
+        margin: 20px 0;
+      }
+    }
+
+    .news {
+      .label {
+        width: 483px;
+        height: 114px;
+        background: url("../img/label2.png") no-repeat;
+        background-position: center;
+      }
+      iframe {
+        margin: 20px 0;
+        border: 2px solid #fff;
+      }
+    }
+  }
+  .right-panel {
+    float: left;
+    text-align: center;
+    .server {
+      width: 210px;
+      height: 130px;
+      background: url("../img/serverstatus.png") no-repeat;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        color: #fff;
+        padding-top: 25px;
+        span {
+          color: lightgreen;
+        }
+      }
+    }
+
+    .activity {
+      a {
+        display: inline-block;
+        width: 210px;
+        height: 127px;
+        background: url("../img/activity.png") no-repeat;
+      }
+    }
+
+    .fb {
+      width: 251px;
+      height: 63px;
+      background: url("../img/facebookpage.png") no-repeat;
+    }
+  }
+
+  footer {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 120px;
+  }
+}
+
+.clearfix {
+  clear: both;
 }
