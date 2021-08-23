@@ -187,9 +187,9 @@ footer {
       margin-right: 7rem; }
       footer .footer-bottom .footer-company p {
         line-height: 1.2; }
-    footer .footer-bottom .footer-info ul li {
+    footer .footer-bottom ul.footer-info li {
       padding-bottom: 0.3rem; }
-      footer .footer-bottom .footer-info ul li a {
+      footer .footer-bottom ul.footer-info li a {
         text-decoration: none;
         color: #fff; }
 
